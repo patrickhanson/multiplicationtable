@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Multiplication Table</title>
+      <style>
+         .cell {display: inline-block; width: 30px; height: 30px; text-align: right; border: solid 1px black; text-align:center}
+         .header {background: lightblue; border: solid 1px black; text-align: center}
+      </style>
+   </head>
+   <body>
+      <h1>Multiplication Table</h1>
+      <script>
+         // output the header row
+         document.write('<span class="cell header">X</span>');
+         for(let i = 0; i <= 10; i++) {
+            document.write('<span class="cell header">' + i + '</span>');
+         }
+         document.write('<br>')
+         // TODO: Write two nested for loops to output the rest of the multiplication table
+         for(let head = 0; head <= 10; head++) {
+             document.write('<span class="cell header">' + head + '</span>');
+             for(let x = 0; x <= 10; x++) {
+                 result = x * head;
+                 document.write('<span class="cell">' + result + '</span>');
+             }
+             document.write('<br>');
+         }
+      </script>
+   </body>
+</html>
